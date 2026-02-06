@@ -1,0 +1,61 @@
+.page {
+	min-height: 100dvh;
+	padding: 48px;
+	background: radial-gradient(
+			circle at top,
+			rgba(255, 212, 160, 0.55),
+			transparent 55%
+		),
+		radial-gradient(
+			circle at 20% 20%,
+			rgba(127, 207, 255, 0.45),
+			transparent 60%
+		),
+		linear-gradient(160deg, #fef9f3 0%, #f6f7fb 60%, #eff3ff 100%);
+	color: #0c0f14;
+	font-family: "Manrope", "Segoe UI", sans-serif;
+}
+
+
+
+.cardGrid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+}
+
+.emptyState {
+	margin-top: 32px;
+	padding: 28px;
+	background: rgba(255, 255, 255, 0.88);
+	border-radius: 16px;
+	border: 1px dashed rgba(15, 23, 42, 0.18);
+	text-align: center;
+}
+
+.loadMoreWrapper {
+	margin-top: 32px;
+	display: flex;
+	justify-content: center;
+}
+
+.loadMoreButton {
+	border: none;
+	padding: 14px 24px;
+	border-radius: 999px;
+	background: linear-gradient(135deg, #f26b35, #ffb020);
+	color: #ffffff;
+	font-weight: 600;
+	box-shadow: 0 12px 20px rgba(242, 107, 53, 0.25);
+	cursor: pointer;
+}
+
+.loadMoreButton:hover {
+	filter: brightness(1.05);
+}
+
+@media (max-width: 640px) {
+	.page {
+		padding: 32px 18px 64px;
+	}
+}

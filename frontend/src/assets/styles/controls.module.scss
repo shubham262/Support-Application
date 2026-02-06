@@ -1,0 +1,70 @@
+.controls {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.88);
+	border: 1px solid rgba(15, 23, 42, 0.12);
+	border-radius: 18px;
+	box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+	margin-bottom: 36px;
+	backdrop-filter: blur(12px);
+
+	.controlsRow {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+
+	.searchField {
+		display: flex;
+		flex: 1 1 280px;
+		flex-direction: column;
+		gap: 10px;
+		min-width: 220px;
+	}
+
+	.searchLabel {
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: #4b5563;
+	}
+
+	.addButton {
+		height: 44px;
+		padding: 0 20px;
+		border-radius: 12px;
+		background: linear-gradient(135deg, #f26b35, #ffb020);
+		border: none;
+		font-weight: 600;
+		box-shadow: 0 12px 20px rgba(242, 107, 53, 0.25);
+	}
+
+	.filters {
+		display: flex;
+		// flex-wrap: wrap;
+		gap: 12px;
+		flex: 1 1 auto;
+		justify-content: flex-start;
+
+		.filterField {
+			display: flex;
+			flex: 0 1 180px;
+			flex-direction: column;
+			gap: 8px;
+			font-size: 13px;
+			text-transform: uppercase;
+			letter-spacing: 0.08em;
+			color: #4b5563;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.filters {
+		flex-wrap: wrap;
+	}
+}

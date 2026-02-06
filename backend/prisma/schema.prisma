@@ -1,0 +1,53 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql" 
+ 
+  
+}
+
+// Ticket Model
+model Ticket {
+  id          String        @id @default(uuid())
+  title       String        // 5-80 chars (validation in your application layer)
+  description String        // 20-2000 chars (validation in your application layer)
+  status      TicketStatus  @default(OPEN)
+  priority    TicketPriority @default(MEDIUM)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  
+  // Relation to comments
+  comments    Comment[]
+}
+
+// Comment Model
+model Comment {
+  id         String   @id @default(uuid())
+  ticketId   String
+  authorName String
+  message    String   // 1-500 chars (validation in your application layer)
+  createdAt  DateTime @default(now())
+  
+  // Relation to ticket
+  ticket     Ticket   @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  
+  @@index([ticketId])
+}
+
+// Enums
+enum TicketStatus {
+  OPEN
+  IN_PROGRESS
+  RESOLVED
+}
+
+enum TicketPriority {
+  LOW
+  MEDIUM
+  HIGH
+}
