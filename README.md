@@ -29,3 +29,9 @@ npx prisma generate
 npm run build
 npm start
 ```
+
+After `npm start`, seed sample data:
+
+```bash
+POST http://localhost:3000/tickets/seed
+```
