@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { type FC, type ReactNode, memo } from "react";
 
 import { Drawer } from "antd";

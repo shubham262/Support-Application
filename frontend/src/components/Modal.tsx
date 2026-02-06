@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { type ReactNode, memo, type FC } from "react";
 import { Modal } from "antd";
 

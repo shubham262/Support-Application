@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/set-state-in-effect */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useContextState } from "../context/ContextState";
 import styles from "../assets/styles/header.module.scss";
 import type { Ticket } from "../context/ticket/state";

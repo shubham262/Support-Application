@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCallback, useMemo, useState, type FC } from "react";
 import { Skeleton } from "antd";
 import styles from "../assets/styles/tickets.module.scss";

@@ -1,7 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react-hooks/immutability */
-/* eslint-disable react-hooks/set-state-in-effect */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCallback, useEffect, useState, type FC } from "react";
 import { Button, Divider, Input, message, Select, Skeleton } from "antd";
 import CustomDrawer from "./CustomDrawer";
@@ -359,36 +355,34 @@ const TicketsDetails: FC<TicketsDetailsProps> = ({
 						)}
 						{!info?.commentsLoading &&
 							info?.ticketDetails?.comments?.length === 0 && (
-							<p className={styles.emptyState}>
-								No comments yet. Start the conversation below.
-							</p>
-						)}
-						{!info?.commentsLoading &&
-							info?.ticketDetails?.comments?.map(
-								(comment: TicketComment) => (
-									<div key={comment.id} className={styles.commentCard}>
-										<div className={styles.commentHeader}>
-											<div>
-												<p className={styles.commentAuthor}>
-													{comment.authorName}
-												</p>
-												<p className={styles.commentDate}>
-													{moment(comment?.createdAt)?.format("MMM DD,YYYY")}
-												</p>
-											</div>
-											<Button
-												danger
-												type="text"
-												size="small"
-												onClick={() => handleDeleteComment(comment?.id)}
-											>
-												Delete
-											</Button>
-										</div>
-										<p className={styles.commentMessage}>{comment.message}</p>
-									</div>
-								)
+								<p className={styles.emptyState}>
+									No comments yet. Start the conversation below.
+								</p>
 							)}
+						{!info?.commentsLoading &&
+							info?.ticketDetails?.comments?.map((comment: TicketComment) => (
+								<div key={comment.id} className={styles.commentCard}>
+									<div className={styles.commentHeader}>
+										<div>
+											<p className={styles.commentAuthor}>
+												{comment.authorName}
+											</p>
+											<p className={styles.commentDate}>
+												{moment(comment?.createdAt)?.format("MMM DD,YYYY")}
+											</p>
+										</div>
+										<Button
+											danger
+											type="text"
+											size="small"
+											onClick={() => handleDeleteComment(comment?.id)}
+										>
+											Delete
+										</Button>
+									</div>
+									<p className={styles.commentMessage}>{comment.message}</p>
+								</div>
+							))}
 					</div>
 
 					<div className={styles.newComment}>

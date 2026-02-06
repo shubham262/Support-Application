@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/preserve-manual-memoization */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCallback, useState, type FC } from "react";
 import { Button, Input, message, Select } from "antd";
 import Modal from "./Modal";

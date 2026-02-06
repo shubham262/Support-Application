@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react-hooks/set-state-in-effect */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import styles from "./assets/styles/home.module.scss";
 import { useContextState } from "./context/ContextState";
 import type { Ticket } from "./context/ticket/state";
